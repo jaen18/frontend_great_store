@@ -37,7 +37,7 @@ class SignUp extends React.Component {
    async handleSubmit(event){    
     event.preventDefault();
     let user={email: this.state.email, name: this.state.name, password:this.state.password};
-    const resp = await axios.post(`http://localhost:4000/api/users`,{user});
+    const resp = await axios.post(`http://localhost:4000/api/users`,user);
     console.log(resp);            
   };
 
